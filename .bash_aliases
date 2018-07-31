@@ -1,6 +1,10 @@
 #alias cp="rsync -ah --progress"
 alias apt-upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias cfg='`which git` --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+if [ -x /usr/share/bash-completion/completions/git ]
+  source /usr/share/bash-completion/completions/git
+  __git_complete cfg __git_main
+fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
