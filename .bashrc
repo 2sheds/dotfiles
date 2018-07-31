@@ -36,6 +36,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Jump more efficiently into the history
+# https://mhoffman.github.io/2015/05/21/how-to-navigate-directories-with-the-shell.html#jump-more-efficiently-into-the-history
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
