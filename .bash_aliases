@@ -1,6 +1,7 @@
 #alias cp="rsync -ah --progress"
 alias apt-upgrade="sudo apt-get update && sudo apt-get upgrade"
 alias cfg='`which git` --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg-update='`which git` --git-dir=$HOME/.cfg/ --work-tree=$HOME submodule update --recursive --remote'
 if [ -x /usr/share/bash-completion/completions/git ]; then
   source /usr/share/bash-completion/completions/git
   __git_complete cfg __git_main
