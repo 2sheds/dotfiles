@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = git://github.com/jiangmiao/auto-pairs.git
+[submodule ".vim/bundle/vim-dockerfile"]
+	path = .vim/bundle/vim-dockerfile
+	url = git://github.com/ekalinin/dockerfile.vim
