@@ -35,10 +35,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-" Show line numbers
-set nu
-" Don'te re-indent indented pasted text
-set paste
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -83,9 +79,22 @@ set tabstop=4
 " Linebreak on 500 characters
 "set lbr
 "set tw=500
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+" Auto indent
+set ai 
+" Smart indent
+set si
+" Wrap lines
+set wrap 
+" Show line numbers
+set nu
+" Don'te re-indent indented pasted text
+" set paste
+
+""""""""""""""""""""""""""""""
+" => YAML overrides
+""""""""""""""""""""""""""""""
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
 " => Status line
