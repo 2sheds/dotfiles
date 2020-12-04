@@ -19,3 +19,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+_ifconfig()
+{
+  _init_completion
+  _available_interfaces
+}
+complete -F _ifconfig ifconfig
