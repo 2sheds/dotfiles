@@ -119,3 +119,10 @@ if has("mac") || has("macunix")
 	vmap <D-j> <M-j>
 	vmap <D-k> <M-k>
 endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"     ansible-vim
+"   https://github.com/pearofducks/ansible-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ansible_yamlKeyName = 'yamlKey'
+let g:ansible_template_syntaxes = { '*.json.j2': 'json' }
+au BufNewFile,BufRead */ansible/*.y?aml$ setfiletype yaml.ansible
