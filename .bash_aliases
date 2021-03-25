@@ -25,3 +25,11 @@ _ifconfig()
   _available_interfaces
 }
 complete -F _ifconfig ifconfig
+
+iptables-watch() {
+  ssh -t $1 "sudo watch -n 2 -d iptables\ -t\ $2\ -nvL\ -w\ 2\ \|\ grep\ tcp\ \|\ awk\ \'\!/\^\\\s+0\\\s+.\*\$/\'"
+}
+
+ip6tables-watch() {
+  ssh -t $1 "sudo watch -n 2 -d ip6tables\ -t\ $2\ -nvL\ -w\ 2\ \|\ grep\ tcp\ \|\ awk\ \'\!/\^\\\s+0\\\s+.\*\$/\'"
+}
