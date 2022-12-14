@@ -21,3 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# set PATH so it includes user's Python bin if it exists
+PYUSERPATH=`python3 -m site --user-base`
+if [ -d "$PYUSERPATH/bin" ] ; then
+    PATH="$PYUSERPATH/bin:$PATH"
+fi
+
